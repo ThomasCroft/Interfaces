@@ -9,6 +9,9 @@
 #include "testSystem.h"
 #include "testers.h"
 
+/*!
+ * Main - tests the class testSystem
+ */
 int main()
 {
 	KeyboardTester keyboardTester;
