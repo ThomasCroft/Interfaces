@@ -30,5 +30,10 @@ int main()
   testSystem.addDeviceTester(&dodgyKeyboardTester);
   std::cout << testSystem.run() << std::endl;
 
+  TestSystem testSystemInitialisationList {&keyboardTester, &dodgyKeyboardTester};
+
+  std::cout << "Test using initialisation list constructor of TestSystem" << std::endl;
+  std::cout << testSystemInitialisationList.run() << std::endl;
+
   return 0;
 }

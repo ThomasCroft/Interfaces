@@ -9,7 +9,13 @@
 #include "testSystem.h"
 
 /*!
- * Append device tester to deviceTeseter list
+ * Construct TestSystem using an initializer_list
+ */
+TestSystem::TestSystem(std::initializer_list<DeviceTester_I *> deviceList_in) : deviceList(deviceList_in)
+{}
+
+/*!
+ * Append device tester to deviceTester list
  *
  * \param[in] deviceTester reference to a device tester
  *
