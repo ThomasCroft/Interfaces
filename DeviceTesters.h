@@ -5,10 +5,10 @@
  *      Author: croft
  */
 
-#ifndef TESTERS_H_
-#define TESTERS_H_
+#ifndef DEVICETESTERS_H_
+#define DEVICETESTERS_H_
 
-#include "testInterface.h"
+#include "DeviceTesterInterface.h"
 
 //! \brief KeyboardTester implements DeviceTester_I interface
 class KeyboardTester final : public DeviceTester_I
@@ -35,4 +35,4 @@ class DodgyKeyboardTester final : public DeviceTester_I
     std::string getDeviceName() const;
 };
 
-#endif /* TESTERS_H_ */
+#endif /* DEVICETESTERS_H_ */

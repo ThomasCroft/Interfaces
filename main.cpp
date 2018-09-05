@@ -6,8 +6,9 @@
  */
 
 #include <iostream>
-#include "testSystem.h"
-#include "testers.h"
+
+#include "DeviceTesters.h"
+#include "TestSystem.h"
 
 /*!
  * Main - tests the class testSystem

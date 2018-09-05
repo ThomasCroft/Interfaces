@@ -5,8 +5,8 @@
  *      Author: croft
  */
 
-#ifndef TESTINTERFACE_H_
-#define TESTINTERFACE_H_
+#ifndef DEVICETESTERINTERFACE_H_
+#define DEVICETESTERINTERFACE_H_
 
 #include <string>
 
@@ -21,4 +21,4 @@ class DeviceTester_I
     virtual std::string getDeviceName() const = 0;
 };
 
-#endif /* TESTINTERFACE_H_ */
+#endif /* DEVICETESTERINTERFACE_H_ */

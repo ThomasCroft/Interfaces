@@ -9,7 +9,8 @@
 #define TESTSYSTEM_H_
 
 #include <list>
-#include "testInterface.h"
+
+#include "DeviceTesterInterface.h"
 
 /*!
  * TestSystem takes a list of testers and tests each.

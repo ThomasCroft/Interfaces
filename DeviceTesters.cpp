@@ -5,7 +5,7 @@
  *      Author: croft
  */
 
-#include "testers.h"
+#include "DeviceTesters.h"
 
 /******************************************************************************
  * KeyboardTester

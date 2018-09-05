@@ -5,8 +5,9 @@
  *      Author: croft
  */
 
+#include "TestSystem.h"
+
 #include <iostream>
-#include "testSystem.h"
 
 /*!
  * Construct TestSystem using an initializer_list
