@@ -36,7 +36,7 @@ bool KeyboardTester::diagnose()
  *
  * \return the string "Keyboard"
  */
-std::string KeyboardTester::getDeviceName()
+std::string KeyboardTester::getDeviceName() const
 {
   return "Keyboard";
 }
@@ -72,7 +72,7 @@ bool DodgyKeyboardTester::diagnose()
  *
  * \return the string "Keyboard"
  */
-std::string DodgyKeyboardTester::getDeviceName()
+std::string DodgyKeyboardTester::getDeviceName() const
 {
   return "Dodgy keyboard";
 }

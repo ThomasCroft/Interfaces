@@ -18,7 +18,7 @@ class DeviceTester_I
     virtual ~DeviceTester_I() = default;
 
     virtual bool diagnose() = 0;
-    virtual std::string getDeviceName() = 0;
+    virtual std::string getDeviceName() const = 0;
 };
 
 #endif /* TESTINTERFACE_H_ */

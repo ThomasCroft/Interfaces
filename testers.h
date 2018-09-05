@@ -18,7 +18,7 @@ class KeyboardTester final : public DeviceTester_I
     ~KeyboardTester() = default;
 
     bool diagnose();
-    std::string getDeviceName();
+    std::string getDeviceName() const;
   private:
     // Assume pressKey is implemented and handles hardware key responses.
     bool pressKey(char key_to_test);
@@ -32,7 +32,7 @@ class DodgyKeyboardTester final : public DeviceTester_I
     ~DodgyKeyboardTester() = default;
 
     bool diagnose();
-    std::string getDeviceName();
+    std::string getDeviceName() const;
 };
 
 #endif /* TESTERS_H_ */
