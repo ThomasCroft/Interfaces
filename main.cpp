@@ -14,21 +14,21 @@
  */
 int main()
 {
-	KeyboardTester keyboardTester;
-	TestSystem testSystem;
+  KeyboardTester keyboardTester;
+  TestSystem testSystem;
 
-	//First test passes NULL
-	testSystem.addDeviceTester(NULL);
+  //First test passes NULL
+  testSystem.addDeviceTester(NULL);
 
-	// Second test just runs keyboard tester - success
-	testSystem.addDeviceTester(&keyboardTester);
-	std::cout << testSystem.run() << std::endl;
+  // Second test just runs keyboard tester - success
+  testSystem.addDeviceTester(&keyboardTester);
+  std::cout << testSystem.run() << std::endl;
 
-	DodgyKeyboardTester dodgyKeyboardTester;
+  DodgyKeyboardTester dodgyKeyboardTester;
 
-	// Third test runs both keyboard and dodgy keyboard testers - failure
-	testSystem.addDeviceTester(&dodgyKeyboardTester);
-	std::cout << testSystem.run() << std::endl;
+  // Third test runs both keyboard and dodgy keyboard testers - failure
+  testSystem.addDeviceTester(&dodgyKeyboardTester);
+  std::cout << testSystem.run() << std::endl;
 
-	return 0;
+  return 0;
 }

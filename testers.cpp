@@ -8,8 +8,8 @@
 #include "testers.h"
 
 /******************************************************************************
-* KeyboardTester
-******************************************************************************/
+ * KeyboardTester
+ ******************************************************************************/
 
 /*!
  * \brief implements diagnose for keyboard. Unchanged code.
@@ -18,17 +18,17 @@
  */
 bool KeyboardTester::diagnose()
 {
-	std::string keys_to_test = "ABCDEFGHIJKLMNOPQRSTUVWXYZ01234567890";
-	bool is_functioning = true;
-	for (size_t pos = 0; pos < keys_to_test.size(); ++pos)
-	{
-		if (!pressKey(keys_to_test[pos]))
-		{
-			is_functioning = false;
-			break;
-		}
-	}
-	return is_functioning;
+  std::string keys_to_test = "ABCDEFGHIJKLMNOPQRSTUVWXYZ01234567890";
+  bool is_functioning = true;
+  for (size_t pos = 0; pos < keys_to_test.size(); ++pos)
+  {
+    if (!pressKey(keys_to_test[pos]))
+    {
+      is_functioning = false;
+      break;
+    }
+  }
+  return is_functioning;
 }
 
 /*!
@@ -38,7 +38,7 @@ bool KeyboardTester::diagnose()
  */
 std::string KeyboardTester::getDeviceName()
 {
-	return "Keyboard";
+  return "Keyboard";
 }
 
 /*!
@@ -50,12 +50,12 @@ std::string KeyboardTester::getDeviceName()
  */
 bool KeyboardTester::pressKey(char key_to_test)
 {
-	return true;
+  return true;
 }
 
 /******************************************************************************
-* DodgyKeyboardTester
-******************************************************************************/
+ * DodgyKeyboardTester
+ ******************************************************************************/
 
 /*!
  * \brief implements diagnose for keyboard. always fails.
@@ -64,7 +64,7 @@ bool KeyboardTester::pressKey(char key_to_test)
  */
 bool DodgyKeyboardTester::diagnose()
 {
-	return false;
+  return false;
 }
 
 /*!
@@ -74,7 +74,7 @@ bool DodgyKeyboardTester::diagnose()
  */
 std::string DodgyKeyboardTester::getDeviceName()
 {
-	return "Dodgy keyboard";
+  return "Dodgy keyboard";
 }
 
 

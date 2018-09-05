@@ -21,15 +21,16 @@
 class TestSystem
 {
 public:
-	TestSystem() {};
-	~TestSystem() {};
+	TestSystem() = default;
+	~TestSystem() = default;
 
 	void addDeviceTester(DeviceTester_I *deviceTester_p);
 	// Run the tests and return a message indicating success or failure.
 	std::string run();
 private:
-	typedef std::list<DeviceTester_I *>::iterator DeviceListIterator;
-	std::list<DeviceTester_I *> deviceList;
+	typedef std::list<DeviceTester_I *> DeviceList;
+	typedef DeviceList::iterator DeviceListIterator;
+	DeviceList deviceList;
 };
 
 

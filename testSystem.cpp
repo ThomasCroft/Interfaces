@@ -17,12 +17,12 @@
  */
 void TestSystem::addDeviceTester(DeviceTester_I *deviceTester_p)
 {
-	if(deviceTester_p == NULL)
-	{
-		std::cout << "NULL pointer passed to addDeviceTester()" << std::endl;
-		return;
-	}
-	deviceList.push_back(deviceTester_p);
+  if(deviceTester_p == NULL)
+  {
+    std::cout << "NULL pointer passed to addDeviceTester()" << std::endl;
+    return;
+  }
+  deviceList.push_back(deviceTester_p);
 }
 
 /*!
@@ -33,23 +33,23 @@ void TestSystem::addDeviceTester(DeviceTester_I *deviceTester_p)
  */
 std::string TestSystem::run()
 {
-	if(deviceList.empty())
-	{
-		return "No tests run, device list is empty";
-	}
-	std::string test_message = "success";
+  if(deviceList.empty())
+  {
+    return "No tests run, device list is empty";
+  }
+  std::string test_message = "success";
 
-	for(DeviceListIterator dl_it = deviceList.begin(); dl_it != deviceList.end(); ++dl_it)
-	{
-		if((*dl_it)->diagnose() == false)
-		{
-			std::string deviceName = (*dl_it)->getDeviceName();
-			test_message = deviceName + " testing failed";
-			break;
-		}
-	}
+  for(DeviceListIterator dl_it = deviceList.begin(); dl_it != deviceList.end(); ++dl_it)
+  {
+    if((*dl_it)->diagnose() == false)
+    {
+      std::string deviceName = (*dl_it)->getDeviceName();
+      test_message = deviceName + " testing failed";
+      break;
+    }
+  }
 
-	return test_message;
+  return test_message;
 }
 
 

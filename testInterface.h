@@ -13,12 +13,12 @@
 //! \brief Interface for a class which tests devices
 class DeviceTester_I
 {
-public:
-	DeviceTester_I() {};
-	virtual ~DeviceTester_I() {};
+  public:
+    DeviceTester_I() = default;
+    virtual ~DeviceTester_I() = default;
 
-	virtual bool diagnose() = 0;
-	virtual std::string getDeviceName() = 0;
+    virtual bool diagnose() = 0;
+    virtual std::string getDeviceName() = 0;
 };
 
 #endif /* TESTINTERFACE_H_ */
